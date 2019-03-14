@@ -3,7 +3,7 @@
         <img id="cat" alt="Gatito" ng-if="gatito.url" ng-model="gatito" ng-src="{{gatito.url}}"/>
     </div>
     <div class="actions">
-        <button id="next" title="Siguiente" ng-click="evtSiguiente()">𝗫</button>
-        <button id="like" title="Me gusta" ng-click="evtAgregarFavorito(gatito.id)">❤</button>
+        <button id="next" title="Siguiente" ng-click="siguiente()">𝗫</button>
+        <button id="like" title="Me gusta" ng-click="agregarFavorito(gatito.id)">❤</button>
     </div>
 </div>

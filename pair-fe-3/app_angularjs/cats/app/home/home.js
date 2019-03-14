@@ -18,11 +18,11 @@ angular.module("myApp.home", ["ngRoute", "appService"])
       });
     };
 
-    $scope.evtSiguiente = function () {
+    $scope.siguiente = function () {
       $scope.obtenerGatito();
     };
 
-    $scope.evtAgregarFavorito = function (id) {
+    $scope.agregarFavorito = function (id) {
       CatasticService.agregarFavorito(id);
       $scope.obtenerGatito();
     };
