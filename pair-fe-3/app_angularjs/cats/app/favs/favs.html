@@ -1,0 +1,11 @@
+<div class="favs-container">
+  <h1>Favorites</h1>
+  <div class="favs">
+    <div class="fav" ng-repeat="favorito in favoritos">
+      <button class="delete-fav" ng-click="eliminarFavorito(favorito.id)">
+        <i class='fas fa-times-circle'></i>
+      </button>
+      <img class='fav-img' alt='Fav' ng-src="{{favorito.url}}" />
+    </div>
+  </div>
+</div>

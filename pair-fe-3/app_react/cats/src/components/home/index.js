@@ -33,8 +33,8 @@ class Home extends Component {
                     <img id="cat" alt="Gatito" src={this.state.url} />
                 </div>
                 <div className="actions">
-                    <button type="button" id="next" onClick={this.obtenerImagen}>𝗫</button>
-                    <button type="button" id="like" onClick={this.agregarFavorito}>❤</button>
+                    <button type="button" id="next" onClick={this.obtenerImagen} title="Siguiente">𝗫</button>
+                    <button type="button" id="like" onClick={this.agregarFavorito} title="Me gusta">❤</button>
                 </div>
             </div>
         );
