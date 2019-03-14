@@ -1,17 +1,14 @@
 "use strict";
 
 angular.module("appNavigation", [])
-    .directive("navLink", ["$document", function ($document) {
-        function link(scope, element, attrs) {
-            var esDefault = attrs.isDefault === "true";
-
-            if (esDefault) {
-                element.children().addClass("active");
-            }
+    .directive("navLink", ["$rootScope", function ($rootScope) {
+        function link(scope, element) {
+            $rootScope.$watch("selectedLink", function () {
+                scope.isSelected = $rootScope.selectedLink === element.attr("id");
+            });
 
             element.on("click", function () {
-                angular.element($document).find("nav-link").children().removeClass("active");
-                element.children().addClass("active");
+                $rootScope.selectedLink = element.attr("id");
             });
         }
 
@@ -20,8 +17,7 @@ angular.module("appNavigation", [])
             templateUrl: "/navigation/navLink.html",
             scope: {
                 url: "@",
-                text: "@",
-                isDefault: "@"
+                text: "@"
             }
         };
     }]);

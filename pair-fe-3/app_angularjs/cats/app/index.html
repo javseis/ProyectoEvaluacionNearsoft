@@ -13,12 +13,12 @@
 
 <body ng-app="myApp">
   <div class="nav">
-    <ul class="navigation">
+    <ul class="navigation" ng-init="selectedLink='home'">
       <li>
-        <nav-link url="#!/home" text="Home" is-default="true"></nav-link>
+        <nav-link id="home" url="#!/home" text="Home"></nav-link>
       </li>
       <li>
-        <nav-link url="#!/favs" text="Favs"></nav-link>
+        <nav-link id="favs" url="#!/favs" text="Favs"></nav-link>
       </li>
     </ul>
   </div>
