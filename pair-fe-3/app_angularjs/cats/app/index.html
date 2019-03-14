@@ -13,7 +13,7 @@
 
 <body ng-app="myApp">
   <div class="nav">
-    <ul class="navigation" ng-init="selectedLink='home'">
+    <ul class="navigation" ng-controller="navigationCtrl">
       <li>
         <nav-link id="home" url="#!/home" text="Home"></nav-link>
       </li>
