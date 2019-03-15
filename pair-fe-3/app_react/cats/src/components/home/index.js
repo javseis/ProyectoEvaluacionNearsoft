@@ -6,17 +6,19 @@ class Home extends Component {
         super(props);
 
         this.state = { id: "", url: "" };
+        this.obtenerImagen = this.obtenerImagen.bind(this);
+        this.agregarFavorito = this.agregarFavorito.bind(this);
     }
 
-    obtenerImagen = () => {
+    obtenerImagen() {
         svcObtenerImagen().then((json) => {
             console.log(json.image);
-            this.setState({ id: json.image.id, url: json.image.url })
+            this.setState({ id: json.image.id, url: json.image.url });
         });
-    };
+    }
 
-    agregarFavorito = () => {
-        svcAgregarFavorito(this.state.id).then((json)=>{
+    agregarFavorito() {
+        svcAgregarFavorito(this.state.id).then((json) => {
             console.log(json);
             this.obtenerImagen();
         });

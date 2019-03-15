@@ -1,9 +1,9 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Home from "./components/home";
 import Favs from "./components/favs";
 import Navegacion from "./components/navegacion";
-import './App.css';
+import "./App.css";
 
 class App extends Component {
   render() {
